@@ -1,0 +1,120 @@
+.home-section {
+  font-size: 1.1rem; /* 텍스트 크기를 약간 줄임 */
+  line-height: 1.6; /* 줄 간격을 조정하여 텍스트 밀도 감소 */
+  padding: 15px; /* 섹션 전체의 패딩을 줄임 */
+}
+
+.home-section2 {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  height: 80vh;
+  padding: 0 2rem; /* 좌우 여백을 추가해서 더 여유 있게 */
+  position: relative; /* 부모 요소의 상대 위치 설정 */
+  z-index: 1; /* 기본 z-index 설정 */
+}
+
+
+.home-section2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10;
+  width: 80%;
+  height: 80%;
+  background-image: url('/public/image/MyCat1.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(0.3px); /* 흐릿하게 만드는 효과 */
+  z-index: -1; /* 배경이 내용 위로 오지 않도록 설정 */
+  border-radius: 50%; /* 구 형태로 만들기 */
+}
+
+.title-overlay {
+  position: relative;
+ /* z-index: 1; /* 포트폴리오 화면은 로그인 화면 아래에 위치 */
+  text-align: center;
+}
+
+.title-overlay h1 {
+  font-size: 3rem; /* 제목 크기를 크게 */
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.title-overlay img {
+  width: 100%; /* 이미지 크기를 조정하여 적절히 채우기 */
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.home-section h1 {
+  font-size: 1.6rem; /* 제목 크기를 약간 줄여서 섹션과 균형 맞춤 */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.home-section fieldset {
+  padding: 15px; /* 필드셋 패딩을 줄여서 여백 감소 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+.home-section ul {
+  list-style-type: disc;
+  padding-left: 15px; /* 리스트 아이템의 들여쓰기 줄임 */
+}
+.home-section ol {
+  list-style-type: disc;
+  padding-left: 15px; /* 리스트 아이템의 들여쓰기 줄임 */
+}
+
+.home-section img {
+  max-width: 100%;
+  max-height: 250px; /* 이미지 높이를 줄여 텍스트와 균형을 맞춤 */
+  margin: 15px 0;
+  object-fit: cover;
+}
+
+
+/* 로그인 화면 오버레이 */
+.login-section {
+  position: relative; /* 절대 위치 설정 */
+  top: 10%; /* 화면 중앙에 배치 */
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  background-color: rgba(255, 0, 0, 0.8); /* 배경색을 좀 더 어둡게 */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* 로그인 화면이 다른 콘텐츠보다 위로 오도록 설정 */
+}
+
+.login-input {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 3; 
+}
+
+.login-button,
+.logout-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.logout-button:hover {
+  background-color: #4f5052;
+}
